@@ -1,0 +1,4 @@
+com\niit\controller\HomeController.class
+com\niit\model\User.class
+com\niit\model\Product.class
+com\niit\model\Customer.class
