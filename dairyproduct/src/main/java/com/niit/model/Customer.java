@@ -3,6 +3,8 @@ package com.niit.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ public class Customer implements Serializable {
 	 */
 	private static final long serialVersionUID = -5223481616565558934L;
 	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int customerid;
 	private String name ;
     private	String email;
