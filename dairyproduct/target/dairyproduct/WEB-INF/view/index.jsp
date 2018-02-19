@@ -28,19 +28,17 @@
 				</div>
 
 				<!-- Left and right controls -->
-				<a class="left carousel-control" href="#myCarousel"
-					data-slide="prev"> <span
-					class="glyphicon glyphicon-chevron-left"></span> <span
-					class="sr-only">Previous</span>
-				</a> <a class="right carousel-control" href="#myCarousel"
-					data-slide="next"> <span
-					class="glyphicon glyphicon-chevron-right"></span> <span
-					class="sr-only">Next</span>
+				<a class="left carousel-control" href="#myCarousel"data-slide="prev">
+				 <span 	class="glyphicon glyphicon-chevron-left"></span>
+				  <span	class="sr-only">Previous</span>
+				</a> <a class="right carousel-control" href="#myCarousel" data-slide="next">
+				 <span 	class="glyphicon glyphicon-chevron-right"></span>
+				  <span	class="sr-only">Next</span>
 				</a>
 			</div>
 		</div>
 		<!--  circled image -->
-		<div class="container" style="margin-top: 20px" class="row">
+	<!-- 	<div class="container" style="margin-top: 20px" class="row">
 
 			<div class="image">
 				<div class="col-md-1" style="margin-right: 300px;">
@@ -82,6 +80,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 	</center>
 	<%@include file="template/Footer.jsp" %>

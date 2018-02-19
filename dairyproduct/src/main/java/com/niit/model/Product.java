@@ -16,7 +16,7 @@ public class Product implements Serializable {
 	private int pid;
 	 private String name;
 	 private String price;
-	 private  String quality;
+	 private  String quantity;
 	 private String image;
 	public int getPid() {
 		return pid;
@@ -42,11 +42,11 @@ public class Product implements Serializable {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public String getQuality() {
-		return quality;
+	public String getQuantity() {
+		return quantity;
 	}
-	public void setQuality(String quality) {
-		this.quality = quality;
+	public void setQuantity(String quality) {
+		this.quantity = quality;
 	}
 
 }
