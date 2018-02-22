@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.niit.model.Product;
 import com.niit.service.ProductService;
 
@@ -13,10 +12,11 @@ import com.niit.service.ProductService;
 public class ProductController {
 @Autowired
 ProductService productService;
-@RequestMapping("viewProduct/$(pid)")
+@RequestMapping("viewProduct/{pid}")
 public String viewProduct(@PathVariable int pid, Model model) {
-	Product product=productService.getProductById(pid);
-	model.addAttribute("product", product);
+System.out.println(pid);
+	Product viewProduct=productService.getProductById(pid);
+	model.addAttribute("product", viewProduct);
 	return "viewProduct";
 }
 

@@ -15,9 +15,30 @@ public class ProductServiceImp implements ProductService{
 	public List<Product> getAllProduct(){
 		return productDao.getAllProduct();
 	}
-	public Product getProductById(int productId) {
+	public Product getProductById(int id) {
 		// TODO Auto-generated method stub
-		return productDao.getProductById(productId);
+		return productDao.getProductById(id);
+	}
+	
+	//to add products 
+	public void addProduct(Product product) {
+		// TODO Auto-generated method stub
+		productDao.addProduct(product);
+		
+	}
+	
+	//to delete the  product 
+	public void deleteProduct(Product product) {
+		// TODO Auto-generated method stub
+		productDao.deleteProduct(product);
+	}
+	
+	//toe edit or say update the product
+	
+	public void editProduct(Product product) {
+		// TODO Auto-generated method stub
+		productDao.editProduct(product);
+		
 	}
 	
 	

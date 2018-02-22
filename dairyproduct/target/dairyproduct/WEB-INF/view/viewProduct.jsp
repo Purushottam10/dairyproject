@@ -5,17 +5,13 @@
 <head>
 <%@include file="template/Header.jsp" %>
 
- <c:set items="${products}" var="product">
+
  <img  src="<c:url value="./resources/images/${product.image}.jpg"/>" class="img-thumbnail"  width="30" /> 
  
 <li>${product.pid }</li><br>
 <li>${product.name }</li><br>
 <li>${product.price }</li><br>
-<form action="/action_page.php">
-</c:set>
-No of item: <input type="text" name="noOfitem" ><br>
-<input type="submit" value="Submit">
-</form>
+
  
 <%@include file="template/Footer.jsp" %>
  

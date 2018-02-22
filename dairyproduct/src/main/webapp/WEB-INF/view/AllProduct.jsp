@@ -24,10 +24,8 @@
                   <td>${product.pid }</td>
                      <td>${product.name }</td>
                      <td>${product.price }</td>
-                     
-  <td> <img  src="<c:url value="./resources/images/${product.image}.jpg"/>" class="img-thumbnail"  wid
-  th="30" /> </td>
-      <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"><span class="glyphicon glyphicon-info-sign"></span></a></td>
+                       <td> <img  src="<c:url value="./resources/images/${product.image}.jpg"/>" class="img-thumbnail"  width="30" /> </td>
+    <td><a href="viewProduct/${product.pid}">view more</a></td>
                 
                       </tr>
            </c:forEach>

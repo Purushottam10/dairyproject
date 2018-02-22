@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.springframework.web.multipart.MultipartFile;
 @Entity
 public class Product implements Serializable {
 	public Product() {
@@ -17,18 +19,36 @@ public class Product implements Serializable {
 	 private String name;
 	 private String price;
 	 private  String quantity;
-	 private String image;
+	 private MultipartFile image;
+	 private String condition;
+	 private int unitInStock;
+	 
+	public int getUnitInStock() {
+		return unitInStock;
+	}
+	public void setUnitInStock(int unitInStock) {
+		this.unitInStock = unitInStock;
+	}
+	public String getCondition() {
+		return condition;
+	}
+	public void setCondition(String condition) {
+		this.condition = condition;
+	}
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
 	public int getPid() {
 		return pid;
 	}
-	public String getImage() {
-		return image;
-	}
-	public void setImage(String image) {
-		this.image = image;
-	}
 	public void setPid(int pid) {
 		this.pid = pid;
+	}
+	public MultipartFile getImage() {
+		return image;
+	}
+	public void setProductImage(MultipartFile image) {
+		this.image = image;
 	}
 	public String getName() {
 		return name;
