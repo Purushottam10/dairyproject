@@ -1,7 +1,7 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ include file="/WEB-INF/views/template/header.jsp" %>
+<%@include file="template/Header.jsp" %>
 
 
 <script>
@@ -46,4 +46,4 @@
 
         <a href="<spring:url value="/admin/product/addProduct" />" class="btn btn-primary">Add Product</a>
 
-<%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@include file="template/Header.jsp" %>

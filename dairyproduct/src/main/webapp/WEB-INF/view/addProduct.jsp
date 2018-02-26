@@ -6,12 +6,10 @@
     <div class="container">
         <div class="page-header">
             <h1>Add Product</h1>
-
-
             <p class="lead">Fill  to add a product:</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/product/addProduct"
+        <form:form action="${pageContext.request.contextPath}/addProduct"
                    method="post" commandName="product" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -21,9 +19,9 @@
 
             <div class="form-group">
                 <label for="category">Category</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="Milk" />Milk</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="cookie" />Coockie</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="Namkeen" />Namkeen</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="Fresh" />Fresh</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="Sessional" />Sessional</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="Arrival" />Arrival</label>
             </div>
 
             <div class="form-group">
@@ -37,9 +35,9 @@
                 <form:input path="price" id="price" class="form-Control" />
             </div>
             <div class="form-group">
-                <label for="unitInStock">Unit In Stock</label>
-                <form:errors path="unitInStock" cssStyle="color:#ff0000;" />
-                <form:input path="unitInStock" id="unitInStock" class="form-Control" />
+                <label for="quantity">Unit In Stock</label>
+                <form:errors path="quantity" cssStyle="color:#ff0000;" />
+                <form:input path="quantity" id="quantity" class="form-Control" />
             </div>
 
 

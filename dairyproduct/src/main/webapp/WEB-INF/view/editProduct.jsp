@@ -1,7 +1,6 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ include file="/WEB-INF/views/template/header.jsp" %>
-
+<%@include file="template/Header.jsp" %>
 
 <div class="container-wrapper">
     <div class="container">
@@ -12,8 +11,8 @@
             <p class="lead">update the product information</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct"
-                   method="post" commandName="product" enctype="multipart/form-data">
+        <form:form action="${pageContext.request.contextPath}/editProduct"
+                   method="post" commandName="product">
 
          <form:hidden path="productId" value="${product.productId}" />
 
@@ -25,9 +24,9 @@
 
             <div class="form-group">
                 <label for="category">Category</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="instrument" />Instrument</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="record" />Record</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="accessory" />Accessory</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="instrument" />Milk</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="record" />cookie</label>
+                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="accessory" />Namkeen</label>
             </div>
 >
 
@@ -64,4 +63,4 @@
         </form:form>
 
 
-<%@ include file="/WEB-INF/views/template/footer.jsp" %>
+<%@include file="template/Footer.jsp" %>

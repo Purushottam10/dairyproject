@@ -21,13 +21,13 @@ public class Product implements Serializable {
 	 private  String quantity;
 	 private MultipartFile image;
 	 private String condition;
-	 private int unitInStock;
+	 private String category;
 	 
-	public int getUnitInStock() {
-		return unitInStock;
+	public String getcategory() {
+		return category;
 	}
-	public void setUnitInStock(int unitInStock) {
-		this.unitInStock = unitInStock;
+	public void setcategory(String  category) {
+		this.category = category;
 	}
 	public String getCondition() {
 		return condition;
