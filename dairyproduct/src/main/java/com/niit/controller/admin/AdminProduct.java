@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.niit.model.Product;
 import com.niit.service.ProductService;
 
+@RequestMapping("/admin")
 @Controller
 public class AdminProduct {
 
@@ -43,18 +44,18 @@ public class AdminProduct {
 
         productService.addProduct(product);
 
-        MultipartFile productImage = product.getImage();
+       MultipartFile productImage = product.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
         path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + product.getPid() + ".png");
 
-        if(productImage != null && !productImage.isEmpty()){
+       if(productImage != null && !productImage.isEmpty()){
             try {
-                productImage.transferTo(new File(path.toString()));
+             productImage.transferTo(new File(path.toString()));
             } catch (Exception ex){
                 ex.printStackTrace();
                 throw new RuntimeException("Product image saving failed", ex);
             }
-        }
+       }
 
         return "redirect:/admin/productInventory";
     
@@ -78,20 +79,20 @@ public class AdminProduct {
         }
 
 
-        MultipartFile productImage = product.getImage();
+       MultipartFile productImage = product.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
         path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + product.getPid() + ".png");
 
-        if(productImage != null && !productImage.isEmpty()){
+       if(productImage != null && !productImage.isEmpty()){
             try {
-                productImage.transferTo(new File(path.toString()));
+             productImage.transferTo(new File(path.toString()));
             } catch (Exception ex){
                 ex.printStackTrace();
                 throw new RuntimeException("Product image saving failed", ex);
             }
-        }
+       }
 
-        productService.editProduct(product);
+       productService.editProduct(product);
 
         return "redirect:/admin/productInventory";
     }

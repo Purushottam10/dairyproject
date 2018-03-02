@@ -4,47 +4,92 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+//import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
-public class Customer implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -5223481616565558934L;
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int customerid;
-	private String name ;
-    private	String email;
-	private String phno;
-	public Customer() {
-		// TODO Auto-generated constructor stub
-	}
-	public int getCustomerid() {
-		return customerid;
-	}
-	public void setCustomerid(int customerid) {
-		this.customerid = customerid;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPhno() {
-		return phno;
-	}
-	public void setPhno(String phno) {
-		this.phno = phno;
-	}
-}
+public class Customer implements Serializable{
+
+
+    private static final long serialVersionUID = 5140900014886997914L;
+
+    @Id
+    @GeneratedValue
+    private int customerId;
+
+   // @NotEmpty (message = "The customer name must not be null")
+    private String customerName;
+
+    //@NotEmpty (message = "The customer email must not be null")
+    private String customerEmail;
+    private String customerPhone;
+
+    //@NotEmpty (message = "The customer username must not be null")
+    private String username;
+
+  //  @NotEmpty (message = "The customer password must not be null")
+    private String password;
+
+    private boolean enabled;
+   
+
+    public int getCutomerId() {
+        return customerId;
+    }
+
+    public void setCutomerId(int cutomerId) {
+        this.customerId = cutomerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public String getCustomerPhone() {
+        return customerPhone;
+    }
+
+    public void setCustomerPhone(String customerPhone) {
+        this.customerPhone = customerPhone;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+   
+} 
