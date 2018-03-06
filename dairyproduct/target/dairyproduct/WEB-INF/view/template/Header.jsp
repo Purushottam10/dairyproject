@@ -56,23 +56,25 @@
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 			<ul class="nav navbar-nav navbar-right">
-				
-				
-				<c:if test="${pageContext.request.userPrincipal.name != null}">
-					<li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
-					<li><a href="<c:url value="/j_spring_security_logout" />">Logout</a> </li>
-					<c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
-						<li><a href="<c:url value="/customer/cart" />">Cart </a> </li>
-					</c:if>
-					<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
-						<li><a href="<c:url value="/admin" />">Admin </a> </li>
-					</c:if>
-				</c:if>
-				<c:if test="${pageContext.request.userPrincipal.name == null}">
-					<li> <a href="<c:url value="/login" />"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
-					<li><a href="<c:url value="/register" />"><span
-						class="glyphicon glyphicon-user"></span>Register</a> </li>
-				</c:if>
+							
+			 <c:if test="${pageContext.request.userPrincipal.name != null}">
+                            <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+                            <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
+
+                            <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                                <li><a href="<c:url value="/customer/cart" />">Cart</a></li>
+                            </c:if>
+
+                            <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                                <li><a href="<c:url value="/admin" />">Admin</a></li>
+                            </c:if>
+
+                        </c:if>
+
+                        <c:if test="${pageContext.request.userPrincipal.name == null}">
+                            <li><a href="<c:url value="/login" />">Login</a></li>
+                            <li><a href="<c:url value="/register" />">Register</a></li>
+                        </c:if>
 			</ul>
 
 		</div>

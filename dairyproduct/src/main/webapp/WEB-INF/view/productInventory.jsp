@@ -31,14 +31,14 @@
             </thead>
             <c:forEach items="${products}" var="product">
                 <tr>
-                    <td><img src="<c:url value="/resources/images/${product.productId}.png" />" alt="image" style="width:100%"/></td>
+                    <td><img src="<c:url value="/resources/images/${product.pid}.png" />" alt="image" style="width:100%"/></td>
                     <td>${product.name}</td>
                     <td>${product.condition}</td>
                     <td>${product.price}  </td>
                     <td>
-                        <a href="<spring:url value="/product/viewProduct/${product.productId}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
-                        <a href="<spring:url value="/admin/product/deleteProduct/${product.productId}" />"><span class="glyphicon glyphicon-remove"></span></a>
-                        <a href="<spring:url value="/admin/product/editProduct/${product.productId}" />"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="<spring:url value="/product/viewProduct/${product.pid}" />"><span class="glyphicon glyphicon-info-sign"></span></a>
+                        <a href="<spring:url value="/admin/product/deleteProduct/${product.pid}" />"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<spring:url value="/admin/product/editProduct/${product.pid}" />"><span class="glyphicon glyphicon-pencil"></span></a>
                     </td>
                 </tr>
             </c:forEach>

@@ -8,7 +8,7 @@
 
 <div class="container">
   <div class="table-responsive" >          
-      <table class="table" class="tableclass="table table-dark" >
+      <table class="table" class="tableclass=table-dark" >
            <thead>
                   <tr>
                        <th scope="col">Pid</th>
@@ -25,7 +25,7 @@
                      <td>${product.name }</td>
                      <td>${product.price }</td>
                        <td> <img  src="<c:url value="./resources/images/${product.image}.jpg"/>" class="img-thumbnail"  width="30" /> </td>
-    <td><a href="<c:url value=" viewProduct/${product.pid}"/> ">view more</a></td>
+    <td><a href="<c:url value="viewProduct/${product.pid}"/> ">view more</a></td>
                 
                       </tr>
            </c:forEach>

@@ -4,7 +4,7 @@
 		<div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-           <center><h1>Register Customer</h1></center>
+           <center> <h1> Registration page </h1> </center>
         </div>
 
         <form:form action="${pageContext.request.contextPath}/register"

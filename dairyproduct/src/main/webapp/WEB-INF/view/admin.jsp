@@ -3,8 +3,7 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-            <h1>Administrator page</h1>
-
+            
             <p class="lead">administrator page!</p>
         </div>
 
@@ -20,7 +19,7 @@
             <a href="<c:url value="/admin/productInventory" /> ">Product Inventory</a>
         </h3>
 
-        <p>check and modify the product inventory!</p>
+        <p>check before modify product </p>
 
         <br/><br/>
 
@@ -29,5 +28,6 @@
         </h3>
 
         <p>view the customer information!</p>
-
+</div>
+</div>
 <%@include file="template/Footer.jsp" %>

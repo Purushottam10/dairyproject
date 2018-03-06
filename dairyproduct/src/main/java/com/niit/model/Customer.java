@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 
@@ -13,10 +14,8 @@ import javax.persistence.Id;
 public class Customer implements Serializable{
 
 
-    private static final long serialVersionUID = 5140900014886997914L;
-
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private int customerId;
 
    // @NotEmpty (message = "The customer name must not be null")

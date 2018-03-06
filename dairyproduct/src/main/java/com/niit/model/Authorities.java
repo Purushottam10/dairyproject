@@ -9,13 +9,7 @@ import javax.persistence.Id;
 public class Authorities {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int authoritiesId;
-	public int getAuthoritiesId() {
-		return authoritiesId;
-	}
-	public void setAuthoritiesId(int authoritiesId) {
-		this.authoritiesId = authoritiesId;
-	}
+	private int authorityId;
 	private String authority;
 	
 	private String username;
@@ -35,6 +29,12 @@ public class Authorities {
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public int getAuthorityId() {
+		return authorityId;
+	}
+	public void setAuthorityId(int authorityId) {
+		this.authorityId = authorityId;
 	}
 	
 

@@ -4,7 +4,7 @@
 		<div class="container-wrapper">
     <div class="container">
         <div class="page-header">
-           <center><h1>Register Customer</h1></center>
+           <center> <h1> Registration page </h1> </center>
         </div>
 
         <form:form action="${pageContext.request.contextPath}/register"
@@ -13,21 +13,21 @@
         <h3>Basic Information</h3>
 
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name">   Name   </label>
             <form:errors path="customerName" cssStyle="color: #ff0000" />
             <form:input path="customerName" id="name" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">    Email   </label>
             <span style="color: #ff0000">${emailMsg}</span>
             <form:errors path="customerEmail" cssStyle="color: #ff0000" />
             <form:input path="customerEmail" id="email" class="form-Control" />
         </div>
 
         <div class="form-group">
-            <label for="phone">Phone</label>
-            <form:input path="customerPhone" id="phone" class="form-Control" />
+            <label for="phone">   Phone   </label>
+                <form:input path="customerPhone" id="phone" class="form-Control" />
         </div>
 
         <div class="form-group">

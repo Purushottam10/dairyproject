@@ -35,7 +35,7 @@ public class HomeController {
 	}
 	return "login";
 	}
-	@RequestMapping("/allproducts")
+	@RequestMapping(value={"/allproducts"})
 	public ModelAndView getAllProduct() {
 		List<Product> allProduct=productService.getAllProduct();
 		return new ModelAndView("AllProduct","products",allProduct);
