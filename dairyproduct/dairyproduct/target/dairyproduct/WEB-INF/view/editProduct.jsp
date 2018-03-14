@@ -11,10 +11,10 @@
             <p class="lead">update the product information</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/editProduct"
-                   method="post" commandName="product">
+        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct"
+                   method="post" commandName="product" enctype="multipart/from-data ">
 
-         <form:hidden path="productId" value="${product.productId}" />
+         <form:hidden path="pid" value="${product.pid}" />
 
             <div class="form-group">
                 <label for="name">Name</label>
@@ -22,14 +22,7 @@
                 <form:input path="name" id="name" class="form-Control" value="${product.name}"/>
             </div>
 
-            <div class="form-group">
-                <label for="category">Category</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="instrument" />Milk</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="record" />cookie</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category" value="accessory" />Namkeen</label>
-            </div>
->
-
+            
             <div class="form-group">
                 <label for="price">Price</label>
                 <form:errors path="price" cssStyle="color:#ff0000;" />
@@ -37,16 +30,16 @@
             </div>
 
             <div class="form-group">
-                <label for="condition">Condition</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="Fresh" />Fresh</label>
-                <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition" value="old" />Old</label>
+                <label for="condition">Description</label>
+               <form:textarea path="description" id="description" class="form-Control" />
+                
             </div>
 
            
             <div class="form-group">
-                <label for="unitInStock">Unit In Stock</label>
-                <form:errors path="unitInStock" cssStyle="color:#ff0000;" />
-                <form:input path="unitInStock" id="unitInStock" class="form-Control" value="${product.unitInStock}"/>
+                <label for="quantity">Quantity</label>
+                <form:errors path="quantity" cssStyle="color:#ff0000;" />
+                <form:input path="quantity" id="quantity" class="form-Control" value="${product.quantity}"/>
             </div>
 
 
@@ -62,5 +55,6 @@
 
         </form:form>
 
-
+</div>
+</div>
 <%@include file="template/Footer.jsp" %>

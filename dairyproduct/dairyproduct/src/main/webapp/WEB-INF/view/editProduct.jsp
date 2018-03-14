@@ -11,8 +11,8 @@
             <p class="lead">update the product information</p>
         </div>
 
-        <form:form action="${pageContext.request.contextPath}/editProduct"
-                   method="post" commandName="product">
+        <form:form action="${pageContext.request.contextPath}/admin/product/editProduct"
+                   method="post" commandName="product" enctype="multipart/form-data">
 
          <form:hidden path="pid" value="${product.pid}" />
 
@@ -22,11 +22,7 @@
                 <form:input path="name" id="name" class="form-Control" value="${product.name}"/>
             </div>
 
-            <div class="form-group">
-                <label for="category">Category</label>
-                 <form:errors path="category" cssStyle="color:#ff0000;" />
-                 <label class="checkbox-inline">Fresh   <form:radiobutton path="Category" id="category" value="Fresh" /></label>
-            <label class="checkbox-inline">Offer  <form:radiobutton path="Category" id="category" value="Fresh" /></label>
+            
             <div class="form-group">
                 <label for="price">Price</label>
                 <form:errors path="price" cssStyle="color:#ff0000;" />
@@ -34,14 +30,14 @@
             </div>
 
             <div class="form-group">
-                <label for="condition">Condition</label>
-               <form:textarea path="condition" id="condition" class="form-Control" />
+                <label for="condition">Description</label>
+               <form:textarea path="description" id="description" class="form-Control" />
                 
             </div>
 
            
             <div class="form-group">
-                <label for="quantity">Unit In Stock</label>
+                <label for="quantity">Quantity</label>
                 <form:errors path="quantity" cssStyle="color:#ff0000;" />
                 <form:input path="quantity" id="quantity" class="form-Control" value="${product.quantity}"/>
             </div>
@@ -59,5 +55,6 @@
 
         </form:form>
 
-
+</div>
+</div>
 <%@include file="template/Footer.jsp" %>

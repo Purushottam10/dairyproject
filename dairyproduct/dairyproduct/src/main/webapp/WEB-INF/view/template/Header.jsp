@@ -12,7 +12,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Insert title here</title>
+<title>Welcome to dairy Product</title>
 
 </head>
 <body>
@@ -21,14 +21,13 @@
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
 				aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span> <span
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a href="<c:url value="index.jsp"/>"></a></a>><img src="<c:url value="./resources/images/logo.jpg"/>" style="height:50px; margin-right:10px; weigth:50px;" alt="home"></a>
+			<a href="<c:url value="index.jsp"/>"></a></a><img src="<c:url value="./resources/images/logo.jpg"/>" style="height:50px; margin-right:10px; weigth:50px;" alt="home"></a>
 
 		</div>
 

@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 
 //import org.hibernate.validator.constraints.NotEmpty;
@@ -14,21 +17,28 @@ import javax.persistence.Id;
 public class Customer implements Serializable{
 
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int customerId;
 
-   // @NotEmpty (message = "The customer name must not be null")
+   @NotNull (message = "The customer name must not be null")
     private String customerName;
 
-    //@NotEmpty (message = "The customer email must not be null")
+    @NotNull (message = "The customer email must not be null")
+    @Pattern(regexp="^([a-zA-Z0-9\\-\\.\\_]+)'+'(\\@)([a-zA-Z0-9\\-\\.]+)'+'(\\.)([a-zA-Z]{2,4})$")
     private String customerEmail;
+    
     private String customerPhone;
 
-    //@NotEmpty (message = "The customer username must not be null")
+   @NotNull (message = "The customer username must not be null")
     private String username;
 
-  //  @NotEmpty (message = "The customer password must not be null")
+  @NotNull(message = "The customer password must not be null")
     private String password;
 
     private boolean enabled;

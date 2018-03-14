@@ -9,15 +9,16 @@ import com.niit.model.Product;
 import com.niit.service.ProductService;
 
 @Controller
-@RequestMapping("/admin")
+
 public class AdminHome {
 	@Autowired
 	ProductService productService;
-	@RequestMapping
+
+	@RequestMapping("/admin")
 	public String adminPage() {
 		return "admin";
 	}
-	 @RequestMapping("/productInventory")
+	 @RequestMapping("/admin/productInventory")
 	    public String productInventory(Model model){
 	        List<Product> products = productService.getAllProduct();
 	        model.addAttribute("products", products);

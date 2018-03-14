@@ -29,14 +29,14 @@ public class AdminProduct {
     @RequestMapping("/product/addProduct")
     public String addProduct(Model model){
         Product product = new Product();
-        product.setName("coockie");
-        model.addAttribute("product", product);
+       
+        model.addAttribute("addproduct", product);
         return "addProduct";
     }
     
 
     @RequestMapping(value="/product/addProduct", method = RequestMethod.POST)
-    public String addProductPost( @ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request){
+    public String addProductPost( @ModelAttribute("addproduct") Product product, BindingResult result, HttpServletRequest request){
 
         if(result.hasErrors()){
             return "addProduct";
@@ -75,6 +75,7 @@ public class AdminProduct {
     public String editProductPost( @ModelAttribute("product") Product product, BindingResult result, HttpServletRequest request){
 
         if(result.hasErrors()){
+        	System.out.println(result);
             return "editProduct";
         }
 

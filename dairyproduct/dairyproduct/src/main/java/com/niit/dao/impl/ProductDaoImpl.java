@@ -3,7 +3,6 @@ package com.niit.dao.impl;
 import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;
-
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -48,22 +47,29 @@ public class ProductDaoImpl implements ProductDao {
 	}
 
 	public void addProduct(Product product) {
-		// TODO Auto-generated method stub
-		Session session = sessionFactory.getCurrentSession();
+	try
+	{
+		Session session = sessionFactory.openSession();
         session.saveOrUpdate(product);
+        System.out.println(product.getName());
         session.flush();
+        session.close();
 	}
-
+	catch(Exception ex)
+	{
+		ex.printStackTrace();
+	}
+	}
 	public void deleteProduct(Product product) {
 		
-        Session session = sessionFactory.getCurrentSession();
+        Session session = sessionFactory.openSession();
         session.delete(product);
         session.flush();
 	}
 
 	public void editProduct(Product product) {
 		
-		Session session = sessionFactory.getCurrentSession();
+		Session session = sessionFactory.openSession();
         session.saveOrUpdate(product);
         session.flush();
 	}

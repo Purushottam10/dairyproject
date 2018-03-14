@@ -24,7 +24,8 @@ public class ProductServiceImpl implements ProductService{
 	public void addProduct(Product product) {
 		// TODO Auto-generated method stub
 		productDao.addProduct(product);
-		
+	
+
 	}
 	
 	//to delete the  product 
